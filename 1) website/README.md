@@ -44,40 +44,31 @@ website/
 ├── package.json
 └── vite.config.js
 ```
-
-⚙️ Getting Started
+## Getting Started
 
 To run this project locally, follow these steps:
 
-Prerequisites
-
+Prerequisites:
 Make sure you have Node.js installed on your machine.
 
-Installation
+Installation:
+1. Open your project folder in the terminal:  
+   ```cd website```
 
-Clone the repository or open your project folder in the terminal:
+3. Install dependencies: 
+   ```npm install```
 
-Bash
-cd website
+5. Run the development server:
+   ```npm run dev```
 
-Install dependencies:
-Bash
-npm install
+7. Open your browser and visit: http://localhost:5173
 
-Run the development server:
-Bash
-npm run dev
+## Scripts
 
-Open your browser and visit the local URL provided by Vite (usually http://localhost:5173).
+* npm run dev - Starts the local development server.
+* npm run build - Builds the app for production in the dist folder.
+* npm run preview - Locally preview the production build.
 
-📜 Scripts
-npm run dev - Starts the local development server.
+## Author
 
-npm run build - Builds the app for production in the dist folder.
-
-npm run preview - Locally preview the production build.
-
-
-👤 Author
 Siddhant Tambe
-
