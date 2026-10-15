@@ -43,6 +43,7 @@ website/
 ├── index.html
 ├── package.json
 └── vite.config.js
+```
 
 ⚙️ Getting Started
 
@@ -79,3 +80,4 @@ npm run preview - Locally preview the production build.
 
 👤 Author
 Siddhant Tambe
+
