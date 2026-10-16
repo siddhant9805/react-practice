@@ -1,0 +1,64 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px); /* Background ko halka sa blur dega jo modern lagta hai */
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.card {
+  width: 320px;
+  min-height: 150px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Button ko top/bottom aur content ko balance karne ke liye */
+  align-items: flex-start;
+  animation: scaleUp 0.2s ease-in-out;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333333;
+  margin: 10px 0;
+  word-break: break-word;
+}
+
+/* Card ke andar wale close button ki styling */
+.card .btn {
+  align-self: flex-end;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card .btn:hover {
+  background-color: #dc2626;
+}
+
+/* Smooth pop-up animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
