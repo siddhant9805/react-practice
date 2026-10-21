@@ -1,0 +1,145 @@
+/* App.css */
+.app-container, div {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+  background-color: #f9fafb;
+}
+
+input[type="text"]:focus {
+  border-color: #667eea;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+form button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+form button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+form button:active {
+  transform: translateY(1px);
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar for list */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+ul::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+li:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+li span {
+  font-size: 1rem;
+  color: #334155;
+  word-break: break-word;
+  padding-right: 10px;
+}
+
+li button {
+  background-color: #fee2e2;
+  color: #ef4444;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+li button:hover {
+  background-color: #ef4444;
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
