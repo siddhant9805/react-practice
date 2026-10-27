@@ -80,7 +80,6 @@ ul {
   overflow-y: auto;
 }
 
-/* Custom Scrollbar for list */
 ul::-webkit-scrollbar {
   width: 6px;
 }
@@ -99,6 +98,8 @@ li {
   border-radius: 12px;
   transition: all 0.2s ease;
   animation: fadeIn 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 li:hover {
@@ -115,11 +116,23 @@ li span {
   padding-right: 10px;
 }
 
+/* --- FIX: Button Group Side-to-Side --- */
+.btn-group {
+  display: flex !important;
+  flex-direction: row !important; /* Buttons ko side-to-side rakhega */
+  align-items: center !important;
+  gap: 8px !important;            /* Dono buttons ke beech ka gap */
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  width: auto !important;
+}
+
+/* Common style for both buttons inside li */
 li button {
-  background-color: #fee2e2;
-  color: #ef4444;
   border: none;
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -127,7 +140,25 @@ li button {
   transition: all 0.2s ease;
 }
 
-li button:hover {
+/* Edit Button Style */
+li .edit-btn {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+li .edit-btn:hover {
+  background-color: #4f46e5;
+  color: white;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+}
+
+/* Delete Button Style */
+li .delete-btn {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+li .delete-btn:hover {
   background-color: #ef4444;
   color: white;
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
